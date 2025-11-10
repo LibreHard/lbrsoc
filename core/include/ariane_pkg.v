@@ -109,7 +109,7 @@ package ariane_pkg;
     // --------------------------------------------------------------------
     // @DANGER: If set to zero a flush will not invalidate the cache-lines
     // in a single core environment where coherence is not needed, this can
-    // improve performance. This *NEEDS* to be switched one when more than
+    // improve performance. This *NEEDS* to be switched on when more than
     // one core is in a system.
     // --------------------------------------------------------------------
     localparam logic INVALIDATE_ON_FLUSH = 1'b1;
