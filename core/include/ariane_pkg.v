@@ -106,4 +106,12 @@ package ariane_pkg;
     // --------------------------------------------------------------------
     localparam bit ENABLE_SPIKE_COMMIT_LOG = 1'b1;
 
+    // --------------------------------------------------------------------
+    // @DANGER: If set to zero a flush will not invalidate the cache-lines
+    // in a single core environment where coherence is not needed, this can
+    // improve performance. This *NEEDS* to be switched one when more than
+    // one core is in a system.
+    // --------------------------------------------------------------------
+    localparam logic INVALIDATE_ON_FLUSH = 1'b1;
+
 endpackage
