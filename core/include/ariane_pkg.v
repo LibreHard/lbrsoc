@@ -114,4 +114,16 @@ package ariane_pkg;
     // --------------------------------------------------------------------
     localparam logic INVALIDATE_ON_FLUSH = 1'b1;
 
+    // --------------------------------------------------------------------
+    // This is preprocessor magic to set ZERO_TVAL to 1 when SPIKE_TANDEM is defined,
+    // Depending on the build-configuration, this can be defined or not.
+    // --------------------------------------------------------------------
+    // @NOTE: Spike is the Risc-V ISA Simulator.
+
+`ifdef SPIKE_TANDEM
+    localparam bit ZERO_TVAL = 1'b1;
+`else
+    localparam bit ZERO_TVAL = 1'b0;
+`endif
+
 endpackage
