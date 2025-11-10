@@ -100,5 +100,10 @@ package ariane_pkg;
       datasize: DataCount,
       dataaddr: DataAddr
     };
-    
+
+    // --------------------------------------------------------------------
+    // NO COMMENT
+    // --------------------------------------------------------------------
+    localparam bit ENABLE_SPIKE_COMMIT_LOG = 1'b1;
+
 endpackage
